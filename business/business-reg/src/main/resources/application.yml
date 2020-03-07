@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: business-reg
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    # 时区,中国是东八区
+    time-zone: GMT+8
+    # 时间格式化
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.253.88:8848
+dubbo:
+  scan:
+    base-packages: learn.lhb.myshop.plus.business.controller
+  protocol:
+    name: dubbo
+    port: -1
+    serialization: kryo
+  registry:
+    address: nacos://172.16.253.88:8848
+    port: 80
+server:
+  # ${random.int[9000,9999]} 随机端口
+  port: 9000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+level:
+  learn.lhb.myshop.plus.provider.service.mapper: debug

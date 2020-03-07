@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="learn.lhb.myshop.plus.provider.mapper.UmsAdminMapper">
+    <!-- 查询系统用户表全部信息 -->
+    <select id="selectAll" resultType="UmsAdmin">
+        SELECT * FROM mplus_ums_admin.ums_admin
+    </select>
+
+    <insert id="insert" parameterType="learn.lhb.myshop.plus.provider.domain.UmsAdmin">
+        INSERT INTO `ums_admin`
+        (`username`,`password`,`icon`,`email`,`nick_name`,`status`)
+        VALUES
+        (
+            #{username},
+            #{password},
+            #{icon},
+            #{email},
+            #{nickName},
+            #{status}
+        )
+    </insert>
+
+    <select id="getUsername" resultType="String">
+        SELECT username FROM mplus_ums_admin.ums_admin WHERE username = #{username};
+    </select>
+
+    <select id="getUmsAdminByOne" resultType="UmsAdmin">
+
+    </select>
+
+</mapper>
