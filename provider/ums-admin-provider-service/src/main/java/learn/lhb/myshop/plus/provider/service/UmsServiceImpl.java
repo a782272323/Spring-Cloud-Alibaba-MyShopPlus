@@ -1,5 +1,6 @@
 package learn.lhb.myshop.plus.provider.service;
 
+import learn.lhb.myshop.plus.commons.utils.TimeUtils;
 import learn.lhb.myshop.plus.provider.api.UmsAdminService;
 import learn.lhb.myshop.plus.provider.domain.UmsAdmin;
 import learn.lhb.myshop.plus.provider.mapper.UmsAdminMapper;
@@ -60,8 +61,10 @@ public class UmsServiceImpl implements UmsAdminService {
      */
     private void initUmsAdmin(UmsAdmin umsAdmin) {
         // 初始化创建时间
-        umsAdmin.setCreateTime(new Date());
-        umsAdmin.setLoginTime(new Date());
+//        umsAdmin.setCreateTime(new Date());
+//        umsAdmin.setLoginTime(new Date());
+        umsAdmin.setCreateTime(TimeUtils.getCurrentDateTime());
+        umsAdmin.setLoginTime(TimeUtils.getCurrentDateTime());
 
         // 初始化状态
         if (umsAdmin.getStatus() == null) {

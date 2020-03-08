@@ -32,21 +32,21 @@ public class UmsAdmin implements Serializable {
      */
     private String nickName;
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getLoginTime() {
-        return loginTime;
-    }
-
-    public void setLoginTime(Date loginTime) {
-        this.loginTime = loginTime;
-    }
+//    public Date getCreateTime() {
+//        return createTime;
+//    }
+//
+//    public void setCreateTime(Date createTime) {
+//        this.createTime = createTime;
+//    }
+//
+//    public Date getLoginTime() {
+//        return loginTime;
+//    }
+//
+//    public void setLoginTime(Date loginTime) {
+//        this.loginTime = loginTime;
+//    }
 
     /**
      * 备注信息
@@ -55,17 +55,19 @@ public class UmsAdmin implements Serializable {
     /**
      * 创建时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date createTime;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    private Date createTime;
+    private String createTime;
     /**
      * 登录时间
      */
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date loginTime;
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    private Date loginTime;
     /**
      * 账号启用状态，0禁用，1启用
      */
     private Integer status;
+    private String loginTime;
 
     public Long getId() {
         return id;
@@ -131,5 +133,21 @@ public class UmsAdmin implements Serializable {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    public String getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(String loginTime) {
+        this.loginTime = loginTime;
     }
 }

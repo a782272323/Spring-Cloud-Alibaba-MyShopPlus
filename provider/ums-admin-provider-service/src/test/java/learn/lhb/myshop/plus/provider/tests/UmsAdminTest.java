@@ -70,7 +70,17 @@ public class UmsAdminTest {
      */
     @Test
     public void getUsernameTest() {
-        String username = "test1";
-        System.out.println(umsAdminService.getUmsAdminByUsername(username).getUsername());
+        String username = "admin";
+        UmsAdmin umsAdmin = umsAdminService.getUmsAdminByUsername(username);
+        System.out.println(umsAdmin.getId());
+        System.out.println(umsAdmin.getUsername());
+        System.out.println(umsAdmin.getPassword());
+        System.out.println(umsAdmin.getIcon());
+        System.out.println(umsAdmin.getNickName());
+        System.out.println(umsAdmin.getNote());
+        System.out.println(umsAdmin.getStatus());
+        System.out.println(umsAdmin.getCreateTime());
+        System.out.println(umsAdmin.getEmail());
+        System.out.println(umsAdmin.getLoginTime());
     }
 }
