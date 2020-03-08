@@ -113,6 +113,19 @@
             </exclusions>
         </dependency>
         <!-- Apache Dubbo End -->
+
+        <!-- Commons Begin -->
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+        </dependency>
+        <!-- Commons -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
+        <!-- Commons end -->
+
         <!-- Projects Begin -->
         <dependency>
             <groupId>learn.lhb.myshop.plus</groupId>
@@ -121,10 +134,27 @@
         </dependency>
         <dependency>
             <groupId>learn.lhb.myshop.plus</groupId>
+            <artifactId>commons-utils</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>learn.lhb.myshop.plus</groupId>
+            <artifactId>configuration-feign</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>learn.lhb.myshop.plus</groupId>
             <artifactId>ums-admin-provider-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>learn.lhb.myshop.plus</groupId>
+            <artifactId>business-profile-feign</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
         <!-- Projects End -->
+
+
     </dependencies>
     <build>
         <plugins>

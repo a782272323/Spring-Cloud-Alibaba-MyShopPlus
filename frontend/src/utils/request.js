@@ -43,9 +43,10 @@ service.interceptors.response.use(
    * You can also judge the status by HTTP Status Code
    */
   response => {
+    // 响应的data数据类型
     const res = response.data
 
-    // if the custom code is not 20000, it is judged as an error.
+    // 如果返回的状态码不是200，则报错
     if (res.code !== 20000) {
       Message({
         message: res.message || 'Error',

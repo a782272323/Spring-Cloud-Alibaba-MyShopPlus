@@ -1,4 +1,4 @@
-package leran.lhb.ny.shop.plus.commons.utils;
+package learn.lhb.myshop.plus.commons.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

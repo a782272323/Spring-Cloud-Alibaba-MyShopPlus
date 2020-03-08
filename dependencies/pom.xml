@@ -9,6 +9,11 @@
     <packaging>pom</packaging>
 
     <properties>
+        <!-- Commons -->
+        <okhttp3.version>4.0.1</okhttp3.version>
+        <feign-okhttp.version>10.2.3</feign-okhttp.version>
+
+        <!-- Native Cloud -->
         <dubbo.version>2.7.2</dubbo.version>
         <dubbo-kryo.version>2.7.2</dubbo-kryo.version>
         <dubbo-actuator.version>2.7.1</dubbo-actuator.version>
@@ -139,6 +144,18 @@
                 <version>${mysql.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp3.version}</version>
+            </dependency>
+
+            <!-- Commons -->
+            <dependency>
+                <groupId>io.github.openfeign</groupId>
+                <artifactId>feign-okhttp</artifactId>
+                <version>${feign-okhttp.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

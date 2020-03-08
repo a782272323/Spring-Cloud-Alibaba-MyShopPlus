@@ -21,7 +21,7 @@ public interface UmsAdminService {
      * @param username 用户名
      * @return
      */
-    String getUsername(String username);
+    UmsAdmin getUmsAdminByUsername(String username);
 
     /**
      * 获取用户

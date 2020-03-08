@@ -13,7 +13,7 @@ spring:
 
 dubbo:
   scan:
-    base-packages: learn.lhb.myshop.plus.business.controller
+    base-packages: learn.lhb.myshop.plus.business.controller,learn.lhb.myshop.plus.business.service
   protocol:
     name: dubbo
     port: -1
@@ -33,3 +33,16 @@ management:
 
 level:
   learn.lhb.myshop.plus.provider.service.mapper: debug
+
+# 开启 Feign 的 OKHttp 模式
+feign:
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+
+business:
+  oauth2:
+    grant_type: password
+    client_id: client
+    client_secret: secret

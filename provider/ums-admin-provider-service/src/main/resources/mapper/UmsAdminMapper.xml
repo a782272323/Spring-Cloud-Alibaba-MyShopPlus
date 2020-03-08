@@ -22,8 +22,8 @@
         )
     </insert>
 
-    <select id="getUsername" resultType="String">
-        SELECT username FROM mplus_ums_admin.ums_admin WHERE username = #{username};
+    <select id="getUmsAdminByUsername" resultType="UmsAdmin">
+        SELECT * FROM mplus_ums_admin.ums_admin WHERE username = #{username};
     </select>
 
     <select id="getUmsAdminByOne" resultType="UmsAdmin">

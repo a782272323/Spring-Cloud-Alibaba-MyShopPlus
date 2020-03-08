@@ -42,7 +42,7 @@ public class UmsAdminTest {
     public void selectAllTest() {
         List<UmsAdmin> umsAdmins = umsAdminMapper.selectAll();
         umsAdmins.forEach(umsAdmin -> {
-            System.out.println(umsAdmin);
+            System.out.println(umsAdmin.getUsername());
         });
     }
 
@@ -52,7 +52,7 @@ public class UmsAdminTest {
     @Test
     public void insertTest(){
         UmsAdmin umsAdmin = new UmsAdmin();
-        umsAdmin.setUsername("test1");
+        umsAdmin.setUsername("test11");
         umsAdmin.setPassword(passwordEncoder.encode("123456"));
         umsAdmin.setEmail("123@124.com");
         umsAdmin.setIcon("http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/images/20190129/170157_yIl3_1767531.jpg");
@@ -71,6 +71,6 @@ public class UmsAdminTest {
     @Test
     public void getUsernameTest() {
         String username = "test1";
-        System.out.println(umsAdminService.getUsername(username));
+        System.out.println(umsAdminService.getUmsAdminByUsername(username).getUsername());
     }
 }

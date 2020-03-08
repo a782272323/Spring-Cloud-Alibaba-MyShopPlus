@@ -3,7 +3,6 @@ package learn.lhb.myshop.plus.provider.service;
 import learn.lhb.myshop.plus.provider.api.UmsAdminService;
 import learn.lhb.myshop.plus.provider.domain.UmsAdmin;
 import learn.lhb.myshop.plus.provider.mapper.UmsAdminMapper;
-import leran.lhb.ny.shop.plus.commons.utils.TimeUtils;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -41,14 +40,13 @@ public class UmsServiceImpl implements UmsAdminService {
     }
 
     /**
-     * 获取用户
+     * 根据用户名获取用户信息
      * @param username 用户名
      * @return
      */
     @Override
-    public String getUsername(String username) {
-
-        return umsAdminMapper.getUsername(username);
+    public UmsAdmin getUmsAdminByUsername(String username) {
+        return umsAdminMapper.getUmsAdminByUsername(username);
     }
 
     @Override

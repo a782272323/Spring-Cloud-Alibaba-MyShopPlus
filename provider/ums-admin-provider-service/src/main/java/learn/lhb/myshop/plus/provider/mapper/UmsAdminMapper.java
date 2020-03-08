@@ -33,7 +33,7 @@ public interface UmsAdminMapper {
      * @param username
      * @return
      */
-    String getUsername(String username);
+    UmsAdmin getUmsAdminByUsername(String username);
 
     /**
      * 获取单个系统用户对象

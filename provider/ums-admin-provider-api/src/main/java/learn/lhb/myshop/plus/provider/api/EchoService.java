@@ -7,5 +7,10 @@ package learn.lhb.myshop.plus.provider.api;
  */
 public interface EchoService {
 
+    /**
+     * 测试服务之间的通信
+     * @param string
+     * @return
+     */
     public String echo(String string);
 }

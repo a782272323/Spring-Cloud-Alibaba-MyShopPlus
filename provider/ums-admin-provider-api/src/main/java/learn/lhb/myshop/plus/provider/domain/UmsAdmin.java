@@ -1,5 +1,7 @@
 package learn.lhb.myshop.plus.provider.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 
 import java.util.Date;
@@ -53,10 +55,12 @@ public class UmsAdmin implements Serializable {
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
     /**
      * 登录时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date loginTime;
     /**
      * 账号启用状态，0禁用，1启用

@@ -27,4 +27,13 @@
             <email>782272323@qq.com</email>
         </developer>
     </developers>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>
